@@ -11,6 +11,13 @@ import Foundation
 
 class ConversionViewController: UIViewController, UITextFieldDelegate {
     
+    override func viewDidLoad() {
+        // Always call the supper implementation of viewDidLoad
+        super.viewDidLoad()
+        
+        print("ConversionViewController loaded its view.")
+    }
+    
     @IBOutlet var celsiusLabel: UILabel!
     
     let numberFormatter: NSNumberFormatter = {
