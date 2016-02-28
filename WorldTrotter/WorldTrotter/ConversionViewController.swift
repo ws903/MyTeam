@@ -76,8 +76,15 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             let wC: NSCharacterSet = NSCharacterSet.whitespaceCharacterSet()
             
             let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
-            
             let replacementTextHasDecimalSeparator = string.rangeOfString(".")
+            
+            //let currentLocale = NSLocale.currentLocale()
+            //let decimalSeparator =
+            //    currentLocale.objectForKey(NSLocaleDecimalSeparator) as! String
+            
+            //let existingTextHasDecimalSeparator
+            //    = textField.text?.rangeOfString(decimalSeparator)
+            //let replacementTextHasDecimalSeparator = string.rangeOfString(decimalSeparator)
             
             if existingTextHasDecimalSeparator != nil &&
                 replacementTextHasDecimalSeparator != nil {
@@ -92,4 +99,9 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
                 return false
             }
     }
-}
+    }
+
+
+
+
+
