@@ -13,9 +13,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="kLy-y5-fgQ">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgw-X4-dhm">
+                                    <rect key="frame" x="8" y="7" width="288" height="30"/>
+                                    <state key="normal" title="Edit"/>
+                                    <connections>
+                                        <action selector="toggleEditingMode:" destination="hja-zC-cmw" eventType="touchUpInside" id="JnX-kE-fPh"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRd-4A-4ct">
+                                    <rect key="frame" x="304" y="7" width="288" height="30"/>
+                                    <state key="normal" title="Add"/>
+                                    <connections>
+                                        <action selector="addNewItem:" destination="hja-zC-cmw" eventType="touchUpInside" id="4U7-fF-ReV"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="sRd-4A-4ct" firstAttribute="width" secondItem="Wgw-X4-dhm" secondAttribute="width" id="MPk-w5-A8v"/>
+                                <constraint firstItem="Wgw-X4-dhm" firstAttribute="leading" secondItem="kLy-y5-fgQ" secondAttribute="leading" constant="8" id="Qgf-fp-hxD"/>
+                                <constraint firstItem="sRd-4A-4ct" firstAttribute="leading" secondItem="Wgw-X4-dhm" secondAttribute="trailing" constant="8" id="ah3-rw-qAg"/>
+                                <constraint firstItem="sRd-4A-4ct" firstAttribute="centerY" secondItem="kLy-y5-fgQ" secondAttribute="centerY" id="hjt-hU-866"/>
+                                <constraint firstItem="Wgw-X4-dhm" firstAttribute="centerY" secondItem="kLy-y5-fgQ" secondAttribute="centerY" id="qZq-cW-12r"/>
+                                <constraint firstAttribute="trailing" secondItem="sRd-4A-4ct" secondAttribute="trailing" constant="8" id="uoZ-Tj-vq4"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="Bbm-Wi-YM8" detailTextLabel="9yY-q3-Pzs" style="IBUITableViewCellStyleValue1" id="U5S-Eq-uZZ">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U5S-Eq-uZZ" id="Cei-PJ-Gzf">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -47,7 +76,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Np-xP-HbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50" y="-1"/>
+            <point key="canvasLocation" x="50" y="24"/>
         </scene>
     </scenes>
 </document>
