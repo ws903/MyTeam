@@ -10,12 +10,22 @@ import UIKit
 
 class ItemStore {
     
+    init() {
+        //for _ in 0..<5 {
+        //    createItem()
+        let noMore = Item(random: true)
+        noMore.name = "No More Items!"
+        allItems.append(noMore)
+    }
+    
     var allItems = [Item]()
     
     func createItem() -> Item {
         let newItem = Item(random: true)
+        let emptyItem = allItems.popLast()
         
         allItems.append(newItem)
+        allItems.append(emptyItem!)
         
         return newItem
     }
@@ -31,6 +41,10 @@ class ItemStore {
             return
         }
         
+        if allItems.count-1 == toIndex {
+            return
+        }
+        
         // Get reference to object being moved so you can reinsert it
         let movedItem = allItems[fromIndex]
         
@@ -39,5 +53,7 @@ class ItemStore {
         
         // Insert item in array at new location
         allItems.insert(movedItem, atIndex: toIndex)
+        
+        
     }
 }

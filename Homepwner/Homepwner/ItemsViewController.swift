@@ -67,6 +67,14 @@ class ItemsViewController: UITableViewController {
         cell.serialNumberLabel.text = item.serialNumber
         cell.valueLabel.text = "$\(item.valueInDollars)"
                 
+                if item.valueInDollars < 50 {
+                    cell.backgroundColor = UIColor.redColor()
+                }
+                else {
+                    cell.backgroundColor = UIColor.greenColor()
+                }
+                
+                
         return cell
     }
     
@@ -116,15 +124,26 @@ class ItemsViewController: UITableViewController {
                 // Present the alert controller
                 presentViewController(ac, animated: true, completion: nil)
     
-    func tableView(tableView: UITableView,
+        }
+            
+    }
+    override func tableView(tableView: UITableView,
         moveRowAtIndexPath sourceIndexPath: NSIndexPath,
         toIndexPath destinationIndexPath: NSIndexPath) {
-        // Update the model
-        itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
+            // Update the model
+            itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
+            tableView.reloadData()
     }
-    }
+
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        let row = itemStore.allItems.count-1
+        if row == indexPath.row {
+            return false
+        }
+    return true
     }
 }
+
 
 
 

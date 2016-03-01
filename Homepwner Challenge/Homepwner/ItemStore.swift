@@ -10,13 +10,18 @@ import UIKit
 
 class ItemStore {
     
-    var allItems = [Item]()
+    var moreItems = [Item]()
+    var lessItems = [Item]()
     
     func createItem() -> Item {
         let newItem = Item(random: true)
         
-        allItems.append(newItem)
-        
+        if newItem.valueInDollars > 50 {
+            moreItems.append(newItem)
+        }
+        else {
+            lessItems.append(newItem)
+        }
         return newItem
     }
     
@@ -24,6 +29,10 @@ class ItemStore {
         for _ in 0..<5 {
             createItem()
         }
-    }
+    let noMore = Item(random: true)
+    noMore.name = "No More Items!"
+    lessItems.append(noMore)
+    moreItems.append(noMore)
     
+    }
 }
