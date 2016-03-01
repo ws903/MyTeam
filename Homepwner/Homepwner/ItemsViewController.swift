@@ -100,10 +100,10 @@ class ItemsViewController: UITableViewController {
         cell.valueLabel.text = "$\(item.valueInDollars)"
         
         if item.valueInDollars < 50 {
-            cell.valueLabel.textColor = UIColor.redColor()
+            cell.backgroundColor = UIColor.redColor()
         }
         else {
-            cell.valueLabel.textColor = UIColor.greenColor()
+            cell.backgroundColor = UIColor.greenColor()
         }
         
         return cell
