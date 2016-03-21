@@ -15,7 +15,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
     
-    var item: Item!
+    @IBAction func backgroundTapped(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    var item: Item! {
+        didSet {
+            navigationItem.title = item.name
+        }
+    }
     
     let numberFormatter: NSNumberFormatter = {
         let formatter = NSNumberFormatter()
@@ -43,6 +50,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Clear first responder
+        view.endEditing(true)
         
         // "Save" changes to item
         item.name = nameField.text ?? ""

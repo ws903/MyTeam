@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Items View Controller-->
+        <!--Homepwner-->
         <scene sceneID="WHT-Jr-tgY">
             <objects>
                 <tableViewController id="pUv-wo-d0e" customClass="ItemsViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
@@ -14,38 +14,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="eg9-ei-0Wh">
-                            <rect key="frame" x="0.0" y="64" width="600" height="60"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOl-Yc-ORJ">
-                                    <rect key="frame" x="304" y="15" width="288" height="30"/>
-                                    <state key="normal" title="Add"/>
-                                    <connections>
-                                        <action selector="addNewItem:" destination="pUv-wo-d0e" eventType="touchUpInside" id="g3T-EX-VXP"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hc7-23-Nag">
-                                    <rect key="frame" x="8" y="15" width="288" height="30"/>
-                                    <state key="normal" title="Edit"/>
-                                    <connections>
-                                        <action selector="toggleEditingMode:" destination="pUv-wo-d0e" eventType="touchUpInside" id="FzG-Jr-1mu"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="GOl-Yc-ORJ" firstAttribute="centerY" secondItem="eg9-ei-0Wh" secondAttribute="centerY" id="R71-pS-0xf"/>
-                                <constraint firstItem="GOl-Yc-ORJ" firstAttribute="width" secondItem="hc7-23-Nag" secondAttribute="width" id="X0P-ph-Bdg"/>
-                                <constraint firstAttribute="trailing" secondItem="GOl-Yc-ORJ" secondAttribute="trailing" constant="8" id="aDK-CS-1UD"/>
-                                <constraint firstItem="hc7-23-Nag" firstAttribute="leading" secondItem="eg9-ei-0Wh" secondAttribute="leading" constant="8" id="e8B-xv-Bs4"/>
-                                <constraint firstItem="hc7-23-Nag" firstAttribute="centerY" secondItem="eg9-ei-0Wh" secondAttribute="centerY" id="fXs-nR-y7L"/>
-                                <constraint firstItem="GOl-Yc-ORJ" firstAttribute="leading" secondItem="hc7-23-Nag" secondAttribute="trailing" constant="8" id="jiR-FK-LmZ"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="xJT-4H-b1p" customClass="ItemCell" customModule="Homepwner" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="152" width="600" height="65"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xJT-4H-b1p" id="hiK-J9-p8D">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
@@ -92,7 +63,13 @@
                             <outlet property="delegate" destination="pUv-wo-d0e" id="v9U-wv-K1d"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ZPX-8m-fNE"/>
+                    <navigationItem key="navigationItem" title="Homepwner" id="ZPX-8m-fNE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="F7o-Vc-GeS">
+                            <connections>
+                                <action selector="addNewItem:" destination="pUv-wo-d0e" id="2Ie-oU-rza"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HwB-7Q-6RW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,12 +161,16 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="UCD-yd-I29" firstAttribute="leading" secondItem="rDA-oI-0mK" secondAttribute="leadingMargin" id="Hf5-dm-mMU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UCD-yd-I29" secondAttribute="trailing" id="Kfa-OK-PYl"/>
                             <constraint firstItem="ngi-kC-hWj" firstAttribute="top" secondItem="UCD-yd-I29" secondAttribute="bottom" constant="8" id="ruv-VO-EDm"/>
                             <constraint firstItem="UCD-yd-I29" firstAttribute="top" secondItem="UGJ-hj-VxX" secondAttribute="bottom" constant="8" id="zx3-Eg-cqn"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="r8D-MJ-yUy" appends="YES" id="8PO-Qq-wNZ"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="aOJ-Lb-Cu7" id="BkH-As-6Yy"/>
@@ -199,6 +180,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVq-JM-EC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="r8D-MJ-yUy">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="WUO-4A-FyB" id="Pfl-BL-55y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1825" y="286"/>
         </scene>
