@@ -12,8 +12,13 @@ class ItemStore {
     init() {
         for _ in 0..<5 {
             createItem()
-            
+        
         }
+        let endRow = Item(random: true)
+        endRow.name = "No more rows"
+        lessthan.append(endRow)
+        morethan.append(endRow)
+        
     }
     
     
@@ -34,6 +39,7 @@ class ItemStore {
         
         return newItem
     }
+    
 //    func removeItem(item: Item) {
 //        if let index = allItems.indexOf(item) {
 //            allItems.removeAtIndex(index)

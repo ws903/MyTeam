@@ -116,12 +116,20 @@ class ItemsViewController: UITableViewController {
 //        cell.textLabel?.text = item.name
 //        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
         if indexPath.section == 0 {
+            
+            let lastRow = itemStore.lessthan.count-1
             cell.nameLabel.text = itemStore.lessthan[indexPath.row].name
-            cell.valueLabel.text = "$\(itemStore.lessthan[indexPath.row].valueInDollars)"
+            if lastRow != itemStore.lessthan.count-1 {
+                cell.valueLabel.text = "$\(itemStore.lessthan[indexPath.row].valueInDollars)"
+
+            }
         }
         else {
+            let lastRow = itemStore.morethan.count-1
             cell.nameLabel.text = itemStore.morethan[indexPath.row].name
-            cell.valueLabel.text = "$\(itemStore.lessthan[indexPath.row].valueInDollars)"
+            if lastRow != itemStore.morethan.count-1 {
+            cell.valueLabel.text = "$\(itemStore.morethan[indexPath.row].valueInDollars)"
+            }
         }
         
 //        cell.nameLabel.text = item.name

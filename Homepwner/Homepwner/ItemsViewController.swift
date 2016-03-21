@@ -11,22 +11,22 @@ import UIKit
 class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
     
-    @IBAction func toggleEditingMode(sender: AnyObject) {
-        // if you are currently in editing mode
-        if editing {
-            //change text of button to inform user of state
-            sender.setTitle("Edit", forState: .Normal)
-        //turn off editing mode
-            setEditing(false, animated: true)
-        }
-        else {
-            //change text of button  to inform user of state
-            sender.setTitle("Done", forState: .Normal)
-            
-            //enter editing mode
-            setEditing(true, animated: true)
-        }
-    }
+//    @IBAction func toggleEditingMode(sender: AnyObject) {
+//        // if you are currently in editing mode
+//        if editing {
+//            //change text of button to inform user of state
+//            sender.setTitle("Edit", forState: .Normal)
+//        //turn off editing mode
+//            setEditing(false, animated: true)
+//        }
+//        else {
+//            //change text of button  to inform user of state
+//            sender.setTitle("Done", forState: .Normal)
+//            
+//            //enter editing mode
+//            setEditing(true, animated: true)
+//        }
+//    }
     
     @IBAction func addNewItem(sender: AnyObject) {
         //Make new index path
@@ -47,7 +47,10 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        navigationItem.leftBarButtonItem = editButtonItem()
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemStore.allItems.count
@@ -112,16 +115,33 @@ class ItemsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // get the height of the status bar
-        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
-        
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
+//        // get the height of the status bar
+//        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+//        
+//        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
+//        tableView.contentInset = insets
+//        tableView.scrollIndicatorInsets = insets
         
 //        tableView.rowHeight = 65
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowItem" {
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let item = itemStore.allItems[row]
+                let detailViewController = segue.destinationViewController as! DetailViewController
+                detailViewController.item = item
+            }
+        }
     }
 }
 
