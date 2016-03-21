@@ -146,7 +146,7 @@ class ItemsViewController: UITableViewController {
         }
     return true
     }
-    
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // If the trigger segue is the "ShowItem" segue
         if segue.identifier == "ShowItem" {
