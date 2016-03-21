@@ -83,7 +83,7 @@
                                     <outlet property="nameLabel" destination="g8E-1i-uYR" id="yKT-Dp-Pdi"/>
                                     <outlet property="serialNumberLabel" destination="bxS-Bc-osP" id="nsA-R8-bBH"/>
                                     <outlet property="valueLabel" destination="b3T-Yd-iPz" id="WhN-lY-myX"/>
-                                    <segue destination="WUO-4A-FyB" kind="show" id="4Ty-6c-biX"/>
+                                    <segue destination="WUO-4A-FyB" kind="show" identifier="ShowItem" id="4Ty-6c-biX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="389" y="286"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="2V1-LV-WVF">
             <objects>
-                <viewController id="WUO-4A-FyB" sceneMemberID="viewController">
+                <viewController id="WUO-4A-FyB" customClass="DetailViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UGJ-hj-VxX"/>
                         <viewControllerLayoutGuide type="bottom" id="ngi-kC-hWj"/>
@@ -147,20 +147,20 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ASO-pv-QhP">
                                         <rect key="frame" x="0.0" y="76" width="560" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5T-vd-Tyv">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5T-vd-Tyv">
                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gL-BE-vCJ">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gL-BE-vCJ">
                                                 <rect key="frame" x="53" y="0.0" width="507" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOJ-Lb-Cu7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" misplaced="YES" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOJ-Lb-Cu7">
                                         <rect key="frame" x="0.0" y="114" width="560" height="450"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -181,6 +181,12 @@
                             <constraint firstItem="UCD-yd-I29" firstAttribute="top" secondItem="UGJ-hj-VxX" secondAttribute="bottom" constant="8" id="zx3-Eg-cqn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="aOJ-Lb-Cu7" id="BkH-As-6Yy"/>
+                        <outlet property="nameField" destination="M2s-Lb-fSP" id="O2J-dn-MPT"/>
+                        <outlet property="serialField" destination="Cj4-gt-oOV" id="Gl1-3h-SZN"/>
+                        <outlet property="valueField" destination="3gL-BE-vCJ" id="lWh-nc-RrD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVq-JM-EC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
