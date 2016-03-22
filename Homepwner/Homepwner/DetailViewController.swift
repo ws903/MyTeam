@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     
     @IBOutlet var nameField: UITextField!
@@ -17,6 +17,17 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBAction func takePicture(sender: UIBarButtonItem) {
+        let imagePicker = UIImagePickerController()
+        //if device has camera, take picture. else pick photo
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            imagePicker.sourceType = .Camera
+        }
+        else {
+            imagePicker.sourceType = .PhotoLibrary
+        }
+        imagePicker.delegate = self
+        //place image picker on screen
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     var item: Item! {
@@ -35,6 +46,18 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         formatter.maximumFractionDigits = 2
         return formatter
     }()
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        //get picked image from info dictionary
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        //put that image on the screen in the image view
+        imageView.image = image
+        
+        //take image picker off screen
+        //you must call  this dismiss method
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     let dateFormatter: NSDateFormatter = {
         let formatter = NSDateFormatter()

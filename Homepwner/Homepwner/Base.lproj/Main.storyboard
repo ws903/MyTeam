@@ -194,6 +194,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="TtT-8I-LZ8" id="kMl-4z-YIY"/>
+                        <outlet property="imageView" destination="vH5-oJ-IOj" id="G4x-ej-Qvg"/>
                         <outlet property="nameField" destination="uhg-6x-MIY" id="70e-bS-BtW"/>
                         <outlet property="serialNumberField" destination="SWs-mP-6at" id="mDf-84-MCR"/>
                         <outlet property="valueField" destination="lhl-ur-lpu" id="UVi-JA-lYa"/>
