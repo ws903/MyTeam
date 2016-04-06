@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F48CF8031CB4827400C56146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CF8021CB4827400C56146 /* AppDelegate.swift */; };
+		F48CF8051CB4827400C56146 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CF8041CB4827400C56146 /* CounterViewController.swift */; };
+		F48CF8081CB4827400C56146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48CF8061CB4827400C56146 /* Main.storyboard */; };
+		F48CF80A1CB4827400C56146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48CF8091CB4827400C56146 /* Assets.xcassets */; };
+		F48CF80D1CB4827400C56146 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48CF80B1CB4827400C56146 /* LaunchScreen.storyboard */; };
+		F48CF8191CB4897100C56146 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CF8181CB4897100C56146 /* Item.swift */; };
+		F48CF81B1CB4927500C56146 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CF81A1CB4927500C56146 /* ListViewController.swift */; };
+		F48CF81D1CB4930400C56146 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48CF81C1CB4930400C56146 /* ItemStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F48CF7FF1CB4827400C56146 /* CounterDoee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterDoee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48CF8021CB4827400C56146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F48CF8041CB4827400C56146 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		F48CF8071CB4827400C56146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F48CF8091CB4827400C56146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F48CF80C1CB4827400C56146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F48CF80E1CB4827400C56146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F48CF8181CB4897100C56146 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F48CF81A1CB4927500C56146 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F48CF81C1CB4930400C56146 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F48CF7FC1CB4827400C56146 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F48CF7F61CB4827400C56146 = {
+			isa = PBXGroup;
+			children = (
+				F48CF8011CB4827400C56146 /* CounterDoee */,
+				F48CF8001CB4827400C56146 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F48CF8001CB4827400C56146 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F48CF7FF1CB4827400C56146 /* CounterDoee.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F48CF8011CB4827400C56146 /* CounterDoee */ = {
+			isa = PBXGroup;
+			children = (
+				F48CF8021CB4827400C56146 /* AppDelegate.swift */,
+				F48CF8181CB4897100C56146 /* Item.swift */,
+				F48CF8041CB4827400C56146 /* CounterViewController.swift */,
+				F48CF81A1CB4927500C56146 /* ListViewController.swift */,
+				F48CF81C1CB4930400C56146 /* ItemStore.swift */,
+				F48CF8061CB4827400C56146 /* Main.storyboard */,
+				F48CF8091CB4827400C56146 /* Assets.xcassets */,
+				F48CF80B1CB4827400C56146 /* LaunchScreen.storyboard */,
+				F48CF80E1CB4827400C56146 /* Info.plist */,
+			);
+			path = CounterDoee;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F48CF7FE1CB4827400C56146 /* CounterDoee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F48CF8111CB4827400C56146 /* Build configuration list for PBXNativeTarget "CounterDoee" */;
+			buildPhases = (
+				F48CF7FB1CB4827400C56146 /* Sources */,
+				F48CF7FC1CB4827400C56146 /* Frameworks */,
+				F48CF7FD1CB4827400C56146 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CounterDoee;
+			productName = CounterDoee;
+			productReference = F48CF7FF1CB4827400C56146 /* CounterDoee.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F48CF7F71CB4827400C56146 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "FinesseFilm Productions";
+				TargetAttributes = {
+					F48CF7FE1CB4827400C56146 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = F48CF7FA1CB4827400C56146 /* Build configuration list for PBXProject "CounterDoee" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F48CF7F61CB4827400C56146;
+			productRefGroup = F48CF8001CB4827400C56146 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F48CF7FE1CB4827400C56146 /* CounterDoee */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F48CF7FD1CB4827400C56146 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48CF80D1CB4827400C56146 /* LaunchScreen.storyboard in Resources */,
+				F48CF80A1CB4827400C56146 /* Assets.xcassets in Resources */,
+				F48CF8081CB4827400C56146 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F48CF7FB1CB4827400C56146 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48CF8051CB4827400C56146 /* CounterViewController.swift in Sources */,
+				F48CF81D1CB4930400C56146 /* ItemStore.swift in Sources */,
+				F48CF8191CB4897100C56146 /* Item.swift in Sources */,
+				F48CF81B1CB4927500C56146 /* ListViewController.swift in Sources */,
+				F48CF8031CB4827400C56146 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F48CF8061CB4827400C56146 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F48CF8071CB4827400C56146 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F48CF80B1CB4827400C56146 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F48CF80C1CB4827400C56146 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F48CF80F1CB4827400C56146 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F48CF8101CB4827400C56146 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F48CF8121CB4827400C56146 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CounterDoee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FinesseFilmProductions.CounterDoee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F48CF8131CB4827400C56146 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CounterDoee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FinesseFilmProductions.CounterDoee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F48CF7FA1CB4827400C56146 /* Build configuration list for PBXProject "CounterDoee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F48CF80F1CB4827400C56146 /* Debug */,
+				F48CF8101CB4827400C56146 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F48CF8111CB4827400C56146 /* Build configuration list for PBXNativeTarget "CounterDoee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F48CF8121CB4827400C56146 /* Debug */,
+				F48CF8131CB4827400C56146 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F48CF7F71CB4827400C56146 /* Project object */;
+}
