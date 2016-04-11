@@ -2,8 +2,13 @@
 //  AppDelegate.swift
 //  Homepwner
 //
+<<<<<<< HEAD
 //  Created by Lorenzo Llamas on 2/28/16.
 //  Copyright © 2016 FinesseFilm Productions. All rights reserved.
+=======
+//  Created by David on 2/28/16.
+//  Copyright © 2016 Big Nerd Ranch. All rights reserved.
+>>>>>>> 75eb3d1cf83949e3eb944bc4f1cb18fddf2f5198
 //
 
 import UIKit
@@ -16,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+<<<<<<< HEAD
         //create an ItemStore
         //let itemStore = ItemStore()
         
@@ -24,6 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //access the itemsviewcontroller and set its item store
         //let itemsController = window!.rootViewController as! ItemsViewController
+=======
+        
+        // Create an ImageStore
+        let imageStore = ImageStore()
+        
+        //Access the ItemsViewController and set its item store and image store
+>>>>>>> 75eb3d1cf83949e3eb944bc4f1cb18fddf2f5198
         let navController = window!.rootViewController as! UINavigationController
         let itemsController = navController.topViewController as! ItemsViewController
         itemsController.itemStore = itemStore
@@ -37,8 +50,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
+<<<<<<< HEAD
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+=======
+>>>>>>> 75eb3d1cf83949e3eb944bc4f1cb18fddf2f5198
         let success = itemStore.saveChanges()
         if (success) {
             print("Saved all of the Items")
@@ -47,7 +63,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Could not save any of the Items")
         }
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 75eb3d1cf83949e3eb944bc4f1cb18fddf2f5198
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
