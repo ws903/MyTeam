@@ -8,11 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MyTeamViewController: UIViewController {
+    
+
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        for index in 1...9 {
+            print("\(index)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
