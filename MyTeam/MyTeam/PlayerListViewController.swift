@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyTeamViewController: UIViewController {
+class PlayerListViewController: UIViewController {
     
 
     
