@@ -1,32 +1,27 @@
 //
-//  ViewController.swift
+//  TableViewController.swift
 //  MyTeam
 //
-//  Created by David on 4/10/16.
+//  Created by Lorenzo Llamas on 4/16/16.
 //  Copyright © 2016 Big Nerd Ranch. All rights reserved.
 //
 
 import UIKit
 
-class PlayerListViewController: UIViewController {
-    
 
+class PlayerListViewController: UITableViewController {
     
+    let positions = ["PG", "SG", "SF", "PF", "C", "U"]
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        for index in 1...9 {
-            print("\(index)")
-        }
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return positions.count
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("position")
+        
+        cell?.detailTextLabel?.text = positions[indexPath.row]
+        
+        return cell!
     }
-
-
 }
-
