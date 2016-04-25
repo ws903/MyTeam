@@ -10,10 +10,34 @@ import UIKit
 
 class AddPlayerPGViewController: UITableViewController {
     
-    let playersPG = ["Stephen Curry", "Chris Paul", "John Wall", "Russell Westbrook", "Damian Lillard", "Kyrie Irving"]
+    var playersPG = ["Stephen Curry", "Chris Paul", "John Wall", "Russell Westbrook", "Damian Lillard", "Kyrie Irving"]
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        jsonParsingFromFile()
+        
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return playersPG.count
+    }
+    
+    func jsonParsingFromFile()
+    {
+        let path: NSString = NSBundle.mainBundle().pathForResource("nba", ofType: "json")!
+        let data : NSData = try! NSData(contentsOfFile: path as String, options: NSDataReadingOptions.DataReadingMapped)
+        self.startParsing(data)
+    }
+    
+    func startParsing(data :NSData)
+    {
+        let dict: NSDictionary!=(try! NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)) as! NSDictionary
+        let pgNames = dict.allKeys as! [String]
+        print("\(pgNames)")
+        playersPG = pgNames
+        print("\(dict)")
+
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
