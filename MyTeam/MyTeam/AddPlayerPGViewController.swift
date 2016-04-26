@@ -10,7 +10,7 @@ import UIKit
 
 class AddPlayerPGViewController: UITableViewController {
     
-    var playersPG = ["Stephen Curry", "Chris Paul", "John Wall", "Russell Westbrook", "Damian Lillard", "Kyrie Irving"]
+    var playersPG:[String]!
 
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class AddPlayerPGViewController: UITableViewController {
     
     func jsonParsingFromFile()
     {
-        let path: NSString = NSBundle.mainBundle().pathForResource("nba", ofType: "json")!
+        let path: NSString = NSBundle.mainBundle().pathForResource("nbaPG", ofType: "json")!
         let data : NSData = try! NSData(contentsOfFile: path as String, options: NSDataReadingOptions.DataReadingMapped)
         self.startParsing(data)
     }
