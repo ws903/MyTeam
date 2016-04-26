@@ -11,6 +11,7 @@ import UIKit
 class AddPlayerPGViewController: UITableViewController {
     
     var playersPG:[String]!
+    var dictPG:NSDictionary!
 
     
     override func viewDidLoad() {
@@ -36,6 +37,7 @@ class AddPlayerPGViewController: UITableViewController {
         let pgNames = dict.allKeys as! [String]
         print("\(pgNames)")
         playersPG = pgNames
+        dictPG = dict
         print("\(dict)")
 
     }
@@ -47,4 +49,5 @@ class AddPlayerPGViewController: UITableViewController {
         
         return cell!
     }
+    
 }
