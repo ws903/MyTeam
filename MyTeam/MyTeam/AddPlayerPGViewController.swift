@@ -8,10 +8,17 @@
 
 import UIKit
 
-class AddPlayerPGViewController: UITableViewController {
+class AddPlayerPGViewController: UITableViewController, playerDelegate {
     
     var playersPG:[String]!
     var dictPG:NSDictionary!
+    var delegate: playerDelegate?
+    
+    func getPlayer(value: String) {
+        //dismissViewControllerAnimated(true, completion: nil)
+        delegate?.getPlayer(value)
+        navigationController?.popViewControllerAnimated(true)
+    }
 
     
     override func viewDidLoad() {
@@ -52,11 +59,11 @@ class AddPlayerPGViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("PG")
+        let cell = tableView.dequeueReusableCellWithIdentifier("PG") as! PlayerNameCell
         
-        cell?.textLabel?.text = playersPG[indexPath.row]
-        
-        return cell!
+        cell.PlayerName.text = playersPG[indexPath.row]
+        cell.delegate = self
+        return cell
     }
     
 }

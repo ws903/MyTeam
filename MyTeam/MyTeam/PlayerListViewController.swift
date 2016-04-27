@@ -8,21 +8,34 @@
 
 import UIKit
 
+protocol  playerDelegate {
+    func getPlayer(value: String)
+}
 
-class PlayerListViewController: UITableViewController {
+class PlayerListViewController: UITableViewController, playerDelegate {
     
-    let positions = ["PG", "SG", "SF", "PF", "C", "U"]
+    var row1VC: Int?
+    
+    func getPlayer(value: String) {
+        print(value)
+        positions[row1VC!] = value
+        tableView.reloadData()
+        
+    }
+    
+    
+    var positions = ["PG", "SG", "SF", "PF", "C", "U"]
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return positions.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("position")
+        let cell = tableView.dequeueReusableCellWithIdentifier("position", forIndexPath: indexPath)
         
-        cell?.detailTextLabel?.text = positions[indexPath.row]
+        cell.textLabel!.text = positions[indexPath.row]
         
-        return cell!
+        return cell
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -30,6 +43,8 @@ class PlayerListViewController: UITableViewController {
             if let row = tableView.indexPathForSelectedRow?.row {
                 let item = positions[row]
                 let addPlayerPGViewController = segue.destinationViewController as! AddPlayerPGViewController
+                addPlayerPGViewController.delegate = self
+                row1VC = row
                 
             }
         }

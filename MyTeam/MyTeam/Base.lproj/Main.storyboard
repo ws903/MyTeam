@@ -39,23 +39,12 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33w-Qn-uHt">
-                                            <rect key="frame" x="15" y="11" width="102" height="21"/>
+                                            <rect key="frame" x="8" y="11" width="102" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOO-y7-BtF">
-                                            <rect key="frame" x="570" y="10" width="22" height="22"/>
-                                            <connections>
-                                                <segue destination="kYE-u8-oRU" kind="show" identifier="ShowPlayers" id="Oda-VI-L8A"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="dOO-y7-BtF" secondAttribute="bottom" constant="3" id="0oa-1k-VVL"/>
-                                        <constraint firstAttribute="topMargin" secondItem="dOO-y7-BtF" secondAttribute="top" constant="-2" id="bbm-9m-yPZ"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="dOO-y7-BtF" secondAttribute="trailing" id="c1Z-gg-g6g"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="kYE-u8-oRU" kind="show" identifier="ShowPlayers" id="zSL-8l-aIW"/>
@@ -81,34 +70,42 @@
             <objects>
                 <tableViewController id="kYE-u8-oRU" customClass="AddPlayerPGViewController" customModule="MyTeam" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Xt-0d-Qqs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PG" id="VF9-cm-OC7">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PG" id="VF9-cm-OC7" customClass="PlayerNameCell" customModule="MyTeam" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VF9-cm-OC7" id="MDs-s9-pwX">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlt-L7-Xt8">
-                                            <rect key="frame" x="15" y="11" width="42" height="21"/>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="279" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km8-zq-2RX">
+                                            <rect key="frame" x="345" y="11" width="22" height="22"/>
+                                            <connections>
+                                                <action selector="AddPlayer:" destination="VF9-cm-OC7" eventType="touchUpInside" id="vR1-BX-ktG"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlt-L7-Xt8">
+                                            <rect key="frame" x="15" y="11" width="325" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km8-zq-2RX">
-                                            <rect key="frame" x="570" y="11" width="22" height="22"/>
-                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="km8-zq-2RX" secondAttribute="trailing" id="2Zd-60-A9k"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="km8-zq-2RX" secondAttribute="bottom" constant="2" id="HeT-8e-RiJ"/>
+                                        <constraint firstItem="km8-zq-2RX" firstAttribute="leading" secondItem="tlt-L7-Xt8" secondAttribute="trailing" constant="5" id="LWo-z0-qwW"/>
                                         <constraint firstItem="km8-zq-2RX" firstAttribute="top" secondItem="MDs-s9-pwX" secondAttribute="topMargin" constant="3" id="hVT-5I-4C6"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="tlt-L7-Xt8" secondAttribute="bottom" constant="3" id="qya-0v-jB4"/>
+                                        <constraint firstItem="tlt-L7-Xt8" firstAttribute="leading" secondItem="MDs-s9-pwX" secondAttribute="leadingMargin" constant="7" id="w5l-zU-pRp"/>
+                                        <constraint firstItem="tlt-L7-Xt8" firstAttribute="top" secondItem="MDs-s9-pwX" secondAttribute="topMargin" constant="3" id="w9P-Aq-Y5x"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="PlayerName" destination="tlt-L7-Xt8" id="reg-9B-0bw"/>
                                     <segue destination="h10-jn-EPO" kind="show" id="AkV-VS-khp"/>
                                 </connections>
                             </tableViewCell>
@@ -119,6 +116,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPS-s3-MUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,7 +131,7 @@
                         <viewControllerLayoutGuide type="bottom" id="BKQ-zo-2LG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pK7-Vf-Pis">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -200,7 +198,4 @@
             <point key="canvasLocation" x="921" y="1004"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Oda-VI-L8A"/>
-    </inferredMetricsTieBreakers>
 </document>
