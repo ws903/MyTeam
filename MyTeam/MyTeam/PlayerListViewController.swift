@@ -24,4 +24,14 @@ class PlayerListViewController: UITableViewController {
         
         return cell!
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowPlayers" {
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let item = positions[row]
+                let addPlayerPGViewController = segue.destinationViewController as! AddPlayerPGViewController
+                
+            }
+        }
+    }
 }

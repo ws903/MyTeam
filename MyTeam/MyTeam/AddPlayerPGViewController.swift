@@ -42,10 +42,19 @@ class AddPlayerPGViewController: UITableViewController {
 
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowStats" {
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let item = playersPG[row]
+                let PlayerStats = segue.destinationViewController as! PlayerStatsViewController
+            }
+        }
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("PG")
         
-        cell?.detailTextLabel?.text = playersPG[indexPath.row]
+        cell?.textLabel?.text = playersPG[indexPath.row]
         
         return cell!
     }
