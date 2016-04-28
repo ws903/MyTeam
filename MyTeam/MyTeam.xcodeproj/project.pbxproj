@@ -20,6 +20,7 @@
 		55CEFFD71CD14ADE005387CF /* nbaPF.json in Resources */ = {isa = PBXBuildFile; fileRef = 55CEFFD61CD14ADE005387CF /* nbaPF.json */; };
 		55CEFFD91CD14AE2005387CF /* nbaC.json in Resources */ = {isa = PBXBuildFile; fileRef = 55CEFFD81CD14AE2005387CF /* nbaC.json */; };
 		55CEFFDD1CD14D20005387CF /* nbaPG.json in Resources */ = {isa = PBXBuildFile; fileRef = 55CEFFDC1CD14D20005387CF /* nbaPG.json */; };
+		55CEFFDF1CD19555005387CF /* nbaALL.json in Resources */ = {isa = PBXBuildFile; fileRef = 55CEFFDE1CD19555005387CF /* nbaALL.json */; };
 		55DFE1EB1CC6FF3400B8716D /* AddPlayerPGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE1EA1CC6FF3400B8716D /* AddPlayerPGViewController.swift */; };
 		F4D186DD1CC2F92200631A07 /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D186DC1CC2F92200631A07 /* PlayerListViewController.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		55CEFFD61CD14ADE005387CF /* nbaPF.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = nbaPF.json; path = ../../../../../../../../Downloads/nbaPF.json; sourceTree = "<group>"; };
 		55CEFFD81CD14AE2005387CF /* nbaC.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = nbaC.json; path = ../../../../../../../../Downloads/nbaC.json; sourceTree = "<group>"; };
 		55CEFFDC1CD14D20005387CF /* nbaPG.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = nbaPG.json; path = ../../../../../../../../Downloads/nbaPG.json; sourceTree = "<group>"; };
+		55CEFFDE1CD19555005387CF /* nbaALL.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = nbaALL.json; path = ../../../../../../../../Downloads/nbaALL.json; sourceTree = "<group>"; };
 		55DFE1EA1CC6FF3400B8716D /* AddPlayerPGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlayerPGViewController.swift; sourceTree = "<group>"; };
 		F4D186DC1CC2F92200631A07 /* PlayerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 				55CEFFD41CD14ADA005387CF /* nbaSF.json */,
 				55CEFFD61CD14ADE005387CF /* nbaPF.json */,
 				55CEFFD81CD14AE2005387CF /* nbaC.json */,
+				55CEFFDE1CD19555005387CF /* nbaALL.json */,
 				F4D186DC1CC2F92200631A07 /* PlayerListViewController.swift */,
 				55DFE1EA1CC6FF3400B8716D /* AddPlayerPGViewController.swift */,
 				5597C46C1CD03C5A00C5B61B /* PlayerNameCell.swift */,
@@ -256,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CEFFDF1CD19555005387CF /* nbaALL.json in Resources */,
 				55CEFFD71CD14ADE005387CF /* nbaPF.json in Resources */,
 				55CEFFD51CD14ADA005387CF /* nbaSF.json in Resources */,
 				55CEFFDD1CD14D20005387CF /* nbaPG.json in Resources */,

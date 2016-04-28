@@ -31,9 +31,9 @@ class PlayerListViewController: UITableViewController, playerDelegate {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("position", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("position", forIndexPath: indexPath) as! PlayerNameCell
         
-        cell.textLabel!.text = positions[indexPath.row]
+        cell.PlayerName.text = positions[indexPath.row]
         
         return cell
     }
@@ -45,6 +45,7 @@ class PlayerListViewController: UITableViewController, playerDelegate {
                 let addPlayerPGViewController = segue.destinationViewController as! AddPlayerPGViewController
                 addPlayerPGViewController.delegate = self
                 row1VC = row
+                addPlayerPGViewController.row1VC = row
                 
             }
         }

@@ -13,6 +13,8 @@ class AddPlayerPGViewController: UITableViewController, playerDelegate {
     var playersPG:[String]!
     var dictPG:NSDictionary!
     var delegate: playerDelegate?
+    var row1VC: Int?
+    
     
     func getPlayer(value: String) {
         //dismissViewControllerAnimated(true, completion: nil)
@@ -31,9 +33,28 @@ class AddPlayerPGViewController: UITableViewController, playerDelegate {
         return playersPG.count
     }
     
-    func jsonParsingFromFile()
-    {
-        let path: NSString = NSBundle.mainBundle().pathForResource("nbaPG", ofType: "json")!
+    func jsonParsingFromFile() {
+        var json: String?
+        if row1VC == 0 {
+            json = "nbaPG"
+        }
+        else if row1VC == 1 {
+            json = "nbaSG"
+        }
+        else if row1VC == 2 {
+            json = "nbaSF"
+        }
+        else if row1VC == 3 {
+            json = "nbaPF"
+        }
+        else if row1VC == 4 {
+            json = "nbaC"
+        }
+        else {
+            json = "nbaALL"
+        }
+        
+        let path: NSString = NSBundle.mainBundle().pathForResource(json, ofType: "json")!
         let data : NSData = try! NSData(contentsOfFile: path as String, options: NSDataReadingOptions.DataReadingMapped)
         self.startParsing(data)
     }
