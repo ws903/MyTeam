@@ -116,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				5500C0131CBB1AC300A49A47 /* AppDelegate.swift */,
-				5500C0151CBB1AC300A49A47 /* PlayerStatsViewController.swift */,
 				5500C0171CBB1AC300A49A47 /* Main.storyboard */,
 				55CEFFDC1CD14D20005387CF /* nbaPG.json */,
 				55CEFFD21CD14AD5005387CF /* nbaSG.json */,
@@ -126,6 +125,7 @@
 				55CEFFDE1CD19555005387CF /* nbaALL.json */,
 				F4D186DC1CC2F92200631A07 /* PlayerListViewController.swift */,
 				55DFE1EA1CC6FF3400B8716D /* AddPlayerPGViewController.swift */,
+				5500C0151CBB1AC300A49A47 /* PlayerStatsViewController.swift */,
 				5597C46C1CD03C5A00C5B61B /* PlayerNameCell.swift */,
 				5500C01A1CBB1AC300A49A47 /* Assets.xcassets */,
 				5500C01C1CBB1AC300A49A47 /* LaunchScreen.storyboard */,
