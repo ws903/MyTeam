@@ -75,6 +75,8 @@ class AddPlayerPGViewController: UITableViewController, playerDelegate {
             if let row = tableView.indexPathForSelectedRow?.row {
                 let item = playersPG[row]
                 let PlayerStats = segue.destinationViewController as! PlayerStatsViewController
+                PlayerStats.player = dictPG.objectForKey(item) as! NSDictionary
+                PlayerStats.playerKey = item
             }
         }
     }
