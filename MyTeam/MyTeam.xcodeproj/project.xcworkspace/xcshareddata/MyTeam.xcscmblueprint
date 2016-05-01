@@ -1,11 +1,12 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A210AB046BE5EF1635E112E37790AC9769899A1D+++E661906",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A210AB046BE5EF1635E112E37790AC9769899A1D+++AAF6FB2",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "A210AB046BE5EF1635E112E37790AC9769899A1D+++D7DC34F" : 0,
     "A210AB046BE5EF1635E112E37790AC9769899A1D+++174C8F8" : 0,
+    "A210AB046BE5EF1635E112E37790AC9769899A1D+++AAF6FB2" : 0,
     "A210AB046BE5EF1635E112E37790AC9769899A1D+++8979BD0" : 0,
     "A210AB046BE5EF1635E112E37790AC9769899A1D+++E661906" : 0
   },
@@ -13,6 +14,7 @@
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "A210AB046BE5EF1635E112E37790AC9769899A1D+++D7DC34F" : "..",
     "A210AB046BE5EF1635E112E37790AC9769899A1D+++174C8F8" : "",
+    "A210AB046BE5EF1635E112E37790AC9769899A1D+++AAF6FB2" : "MyTeam\/",
     "A210AB046BE5EF1635E112E37790AC9769899A1D+++8979BD0" : "",
     "A210AB046BE5EF1635E112E37790AC9769899A1D+++E661906" : "DM-GY-9103-SP16-CourseWork\/"
   },
@@ -29,6 +31,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ws903\/DM-GY-9103-SP16-CourseWork.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A210AB046BE5EF1635E112E37790AC9769899A1D+++8979BD0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ws903\/MyTeam.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A210AB046BE5EF1635E112E37790AC9769899A1D+++AAF6FB2"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ltl237\/DM-GY-9103-SP16-CourseWork.git",
