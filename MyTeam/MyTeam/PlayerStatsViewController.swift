@@ -13,8 +13,26 @@ class PlayerStatsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       // recentGames.layer.borderColor = UIColor.blackColor().CGColor
-       //recentGames.layer.borderWidth = 2.0
+        nameLabel.layer.borderColor = UIColor.blackColor().CGColor
+        nameLabel.layer.borderWidth = 1.0
+        game1Label.layer.borderColor = UIColor.blackColor().CGColor
+        game1Label.layer.borderWidth = 1.0
+        game2Label.layer.borderColor = UIColor.blackColor().CGColor
+        game2Label.layer.borderWidth = 1.0
+        game3Label.layer.borderColor = UIColor.blackColor().CGColor
+        game3Label.layer.borderWidth = 1.0
+        
+        gameBorder1.layer.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.3).CGColor
+        gameBorder1.layer.borderWidth = 1.0
+        gameBorder2.layer.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.3).CGColor
+        gameBorder2.layer.borderWidth = 1.0
+        gameBorder3.layer.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.3).CGColor
+        gameBorder3.layer.borderWidth = 1.0
+        
+        game1Name.textColor = UIColor.whiteColor()
+        game2Name.textColor = UIColor.whiteColor()
+        game3Name.textColor = UIColor.whiteColor()
+        
         let game1 = player.objectForKey("game1") as! [String:String]
         playerName.text = playerKey
         fg1.text = game1["fg_percent"]
@@ -55,6 +73,17 @@ class PlayerStatsViewController: UIViewController {
     var player: NSDictionary!
     
     var playerKey: String!
+    
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var game1Name: UILabel!
+    @IBOutlet var game2Name: UILabel!
+    @IBOutlet var game3Name: UILabel!
+    @IBOutlet var game1Label: UILabel!
+    @IBOutlet var game2Label: UILabel!
+    @IBOutlet var game3Label: UILabel!
+    @IBOutlet var gameBorder1: UILabel!
+    @IBOutlet var gameBorder2: UILabel!
+    @IBOutlet var gameBorder3: UILabel!
     
     @IBOutlet var recentGames: UILabel!
     @IBOutlet var playerName: UILabel!
